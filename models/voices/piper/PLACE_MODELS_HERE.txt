@@ -1,0 +1,10 @@
+# Piper TTS voices go here
+# ─────────────────────────────────────────────────────────────────
+# Download .onnx + .onnx.json pairs from:
+#   https://huggingface.co/rhasspy/piper-voices
+#
+# Example layout:
+#   models/voices/piper/en_US-lessac-medium.onnx
+#   models/voices/piper/en_US-lessac-medium.onnx.json
+#
+# The app auto-discovers any .onnx file paired with a matching .json.

@@ -1,0 +1,31 @@
+# PDF Audiobook Converter – Python Dependencies
+# ================================================
+# Install with:  pip install -r requirements.txt
+#
+# System dependencies (install separately):
+#   Tesseract OCR:  sudo apt install tesseract-ocr   (Ubuntu/Debian)
+#                   brew install tesseract            (macOS)
+#   FFmpeg:         sudo apt install ffmpeg           (for MP3/M4A output)
+#                   brew install ffmpeg               (macOS)
+#   Piper TTS bin:  Download from https://github.com/rhasspy/piper/releases
+#                   Place on your PATH
+
+# ── Core GUI ────────────────────────────────────────────────────────
+PyQt6>=6.5.0
+PyQt6-Qt6>=6.5.0
+
+# ── PDF Processing ──────────────────────────────────────────────────
+PyMuPDF>=1.23.0          # Fast PDF reader (fitz)
+pdfminer.six>=20221105   # Fallback text extraction
+
+# ── OCR (optional, for scanned PDFs) ────────────────────────────────
+pytesseract>=0.3.10
+Pillow>=10.0.0
+
+# ── TTS Engines (choose one or more) ────────────────────────────────
+# Piper TTS: install binary from GitHub, no pip package needed
+# Coqui TTS (heavier, but pure Python):
+# TTS>=0.22.0
+
+# ── Audio Processing ─────────────────────────────────────────────────
+pydub>=0.25.1            # Audio merging + format conversion
